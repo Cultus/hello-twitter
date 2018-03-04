@@ -16,5 +16,5 @@ Route::get('/twitter', '\App\Admin\Controllers\HomeController@twitter')->name('t
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/oauth_callback', 'HomeController@index')->name('home');
 Route::get('/submitted', '\App\Admin\Controllers\HomeController@show_create')->name('create');

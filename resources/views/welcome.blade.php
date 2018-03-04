@@ -23,8 +23,14 @@
             </div>
           </div>
           <div class="flex-center position-ref full-height">
-              @component('jumbotron')
-              @endcomponent
+              @if(empty($result))
+                @component('jumbotron')
+                @endcomponent
+              @else
+                <pre>
+                  {{ $result }}
+                </pre>
+              @endif
           </div>
         </div>
         <div class="content">

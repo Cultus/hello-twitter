@@ -11,6 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', '\App\Admin\Controllers\HomeController@show_index')->name('home');
+Route::get('/submitted', '\App\Admin\Controllers\HomeController@show_create')->name('create');

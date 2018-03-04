@@ -1,6 +1,5 @@
 <div class="jumbotron">
-    <h2>Create your scheudle</h2>
-    <p>Create a schedule and tweet your QuestionBox URL</p>
-    <p>Create a schedule and tweet your QuestionBox URL</p>
-    <p>The following is .</p>
+    <h2>Make an order to remintter</h2>
+    <p>Create a <span class="text-primary">schedule</span> to Remintter.</p>
+    <p><a href={{ route('twitter') }}>Let's try Remitter!</p>
 </div>

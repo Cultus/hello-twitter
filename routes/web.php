@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', '\App\Admin\Controllers\HomeController@show_index')->name('home');
-Route::get('/submitted', '\App\Admin\Controllers\HomeController@show_create')->name('create');
+Route::get('/', '\App\Admin\Controllers\HomeController@show_index')->name('index');
+Route::get('/twitter', '\App\Admin\Controllers\HomeController@twitter')->name('twitter');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/submitted', '\App\Admin\Controllers\HomeController@show_create')->name('create');

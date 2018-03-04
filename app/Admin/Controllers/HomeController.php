@@ -23,9 +23,15 @@ class HomeController extends Controller
      */
     public function show_create()
     {
-        $result = 'Init';
-        $result = \Twitter::post("statuses/update", array("status" => "テストメッセージ"));
+        $result = \Twitter::post(
+            'statuses/update',
+            array('status' => 'テストメッセージ')
+        );
         $result = json_encode($result);
-        return view('welcome', compact('result'));
+        if(\Twitter::getLastHttpCode() === 200) {
+            return view('welcome', compact('result'));
+        } else {
+            return view('welcome', compact('result'));
+        }
     }
 }

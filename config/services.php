@@ -35,4 +35,11 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'twitter' => [
+        'client_id' => env('TWITTER_CONSUMER_KEY', ''),
+        'client_secret' => env('TWITTER_CONSUMER_SECRET', ''),
+        'access_token' => env('TWITTER_ACCESS_TOKEN', ''),
+        'access_token_secret' => env('TWITTER_ACCESS_TOKEN_SECRET', ''),
+        'redirect' => env('TWITTER_OAUTH_CALLBACK', ''),
+    ],
 ];

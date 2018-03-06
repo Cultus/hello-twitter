@@ -12,9 +12,9 @@
 */
 
 Route::get('/', '\App\Admin\Controllers\HomeController@show_index')->name('index');
-Route::get('/twitter', '\App\Admin\Controllers\HomeController@twitter')->name('twitter');
 
 Auth::routes();
 
-Route::get('/oauth_callback', 'HomeController@index')->name('home');
-Route::get('/submitted', '\App\Admin\Controllers\HomeController@show_create')->name('create');
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/redirect', '\App\Admin\Controllers\HomeController@redirect')->name('redirect');
+Route::get('/oauth_callback', '\App\Admin\Controllers\HomeController@callback')->name('callback');

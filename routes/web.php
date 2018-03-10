@@ -18,3 +18,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/redirect', '\App\Admin\Controllers\HomeController@redirect')->name('redirect');
 Route::get('/oauth_callback', '\App\Admin\Controllers\HomeController@callback')->name('callback');
+Route::resource('/tasks', 'TaskController')->name('task');
